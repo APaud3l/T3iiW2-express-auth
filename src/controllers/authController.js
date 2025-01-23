@@ -8,9 +8,11 @@ async function registerUser(request, response) {
     // Importing the username and password from the request body
     const { username, password } = request.body;
 
+    console.log(username);
     // Checking to see if the username exists
     const existingUser = await User.findOne({ username });
 
+    console.log(existingUser);
     // If the username exists, send an error message
     if (existingUser) {
         return response
