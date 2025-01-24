@@ -11,9 +11,9 @@ const app = express();
 app.use(helmet());
 
 let corsOptions = {
-    origin: ["http://localhost:3000", "http://localhost:5173", "https://reactapp.com"],
+    origin: ["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:5173", "https://reactapp.com"],
     methods: ["GET", "POST"]
-}
+};
 
 app.use(cors(corsOptions));
 app.use(express.json());
